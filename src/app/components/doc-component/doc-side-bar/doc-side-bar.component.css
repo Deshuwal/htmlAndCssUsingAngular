@@ -1,0 +1,21 @@
+/* Docs  */
+/*-------------------------------*/
+/* Docs main */
+.docs-main h3{
+    margin: 20px 0;
+}
+.docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;/*setting item to align upward*/
+
+}
+/* media query i.e how it will appear on devices */
+/* tablets and under */
+/* ---------------------------------------------------- */
+@media(max-width:768px){
+    .docs-main .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+ 
+}

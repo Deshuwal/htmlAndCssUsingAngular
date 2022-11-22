@@ -1,0 +1,83 @@
+/* showcase styling */
+.showcase{
+    height: 400px;
+    background-color:#047aed ;
+    color: #fff;
+    position: relative;/*parent positioning while absalute child*/
+}
+.showcase h1{
+    font-size: 40px;
+}
+.showcase p{
+    margin: 20px 0;
+}
+/*this affect only the showcase grid content by making widen by 55 and 45 respectively */
+.showcase .grid{
+    overflow: visible; /*enable overlapping of content */
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+/* showcase styling */
+.showcase{
+    height: 400px;
+    background-color:#047aed ;
+    color: #fff;
+    position: relative;/*parent positioning while absalute child*/
+}
+.showcase h1{
+    font-size: 40px;
+}
+.showcase p{
+    margin: 20px 0;
+}
+/* this create a splanty effect on the page *
+/* .showcase::before, */
+.showcase::after{
+    content: "";/*this most be implement when before or after is used*/
+    position: absolute;
+    height: 100px;
+    bottom: -70;/*pushes it downward*/
+    right: 0;
+    left: 0;
+    background-color: #fff; 
+    /* tranform change the position a little bit */
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+/* stats */
+/* ------------------------ */
+.stats{
+    padding-top: 110px;
+}
+/* cloud */
+/* ------------------------------ */
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+/* media query i.e how it will appear on devices */
+/* tablets and under */
+/* ---------------------------------------------------- */
+@media(max-width:768px){
+    /* this applied to all the grid elts */
+    .grid,
+    .showcase .grid
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .showcase{
+        height: auto;/*takes the amount of the container when squed*/
+    }
+    .showcase-text{
+        text-align: center;
+        margin-top: 30px;
+    }
+    .showcase-form{
+        justify-self: center;
+        margin: auto;
+    }
+}

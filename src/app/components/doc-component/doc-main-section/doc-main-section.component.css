@@ -1,0 +1,60 @@
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+h1,h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+p{
+    margin: 10px 0;
+}
+img{
+    width: 100%;/*this set all the image to fit to content size*/
+}
+code,pre{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+/* Docs  */
+/*-------------------------------*/
+.docs-head img,
+.docs-sub-head img{
+    width: 150px;
+    justify-self: flex-end;/*pushes image item to the right end*/
+}
+/* Docs main */
+.docs-main h3{
+    margin: 20px 0;
+}
+.docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;/*setting item to align upward*/
+
+}
+.docs-main nav li{
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px #ccc solid;
+}
+.docs-main nav a{
+    color: #333;
+}
+.docs-main a:hover{
+    font-weight: bold;
+}
+/* media query i.e how it will appear on devices */
+/* tablets and under */
+/* ---------------------------------------------------- */
+@media(max-width:768px){
+    .docs-main .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}

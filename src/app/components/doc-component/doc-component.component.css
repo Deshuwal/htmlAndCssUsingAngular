@@ -1,0 +1,20 @@
+img{
+    width: 100%;/*this set all the image to fit to content size*/
+}
+/* media query i.e how it will appear on devices */
+/* tablets and under */
+/* ---------------------------------------------------- */
+@media(max-width:768px){
+    .docs-head .grid
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .docs-head{
+        text-align: center;
+    }
+    .docs-head img{
+        justify-self: center;
+        width: 50%;
+    }
+}

@@ -1,0 +1,17 @@
+/* languages */
+/* ------------------ */
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;/*makes the elt move gently upward*/
+}
+.languages .flex{
+    flex-wrap: wrap;
+}
+.languages .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.languages .card:hover{
+    transform: translateY(-15px);/*-ve move upward while +ve move downward*/
+}

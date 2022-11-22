@@ -1,0 +1,38 @@
+/* navbar styling */
+/* ----------------------------------- */
+.navbar{
+    background-color:#047aed;
+    color: #fff;
+    height: 70px;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar a{
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+.navbar a:hover{
+    border-bottom: 2px #fff solid;
+}
+.navbar .flex{
+    justify-content: space-between;
+}
+
+/* mobile media query*/
+/* media query i.e how it will appear on devices */
+/* ------------------------------------ */
+@media(max-width:500px){
+    .navbar{
+        height: 110px;
+    }
+    .navbar .flex{
+        flex-direction: column;
+    }
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0,0,0, 0.1);
+    }
+    
+}

@@ -1,0 +1,9 @@
+.footer .grid-3{
+    justify-self: center;
+    height: auto;
+}
+/* footer */
+/* ---------------- */
+.footer .social a{
+    margin: 0 10px;
+}

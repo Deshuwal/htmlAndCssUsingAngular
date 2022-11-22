@@ -1,1 +1,277 @@
-/* You can add global styles to this file, and also import other style files */
+/* custom property setting a universal color which can be used repeatly */
+:root{
+    --primary-color:#047aed;
+    --primary-color:#047aed;
+    --secondary-color:#1c3fa8;
+    --dark-color:#002240;
+    --light-color:#f4f4f4;
+    --sucess-color:#5cb85c;
+    --error-color:#d9534f;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'lato',sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+h1,h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+p{
+    margin: 10px 0;
+}
+img{
+    width: 100%;/*this set all the image to fit to content size*/
+}
+
+
+/* creating animations */
+/* ------------------------------------- */
+@keyframes slideInFromLeft{
+    /* the 0% make it start from outside left 
+    and move 100% toward right till it reaches 0%*/
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight{
+    /* the 0% make it start from outside right 
+    and move 100% toward left till it reaches 0%*/
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromTop{
+    /* the 0% make it start from outside left 
+    and move 100% toward right till it reaches 0%*/
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromBottom{
+    /* the 0% make it start from outside left 
+    and move 100% toward right till it reaches 0%*/
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+/* applying animation to element */
+.showcase-text{
+    animation: slideInFromLeft 1s ease-in;
+}
+.showcase-form{
+    animation: slideInFromRight 1s ease-in;
+}
+.stats{
+    animation: slideInFromBottom 1s ease-in;
+}
+
+/* media query i.e how it will appear on devices */
+/* tablets and under */
+/* ---------------------------------------------------- */
+@media(max-width:768px){
+    /* this applied to all the grid elts */
+    .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid,
+    .footer .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .cli .grid >*:first-child{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .footer .grid-3{
+        justify-self: center;
+        height: auto;
+    }
+}
+
+/* utilities styling i.e. repeated styliing with the site */
+/*-------------------------------------------------------- */
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;/*this enable overlapping of content*/
+    padding: 0 40px;
+}
+.card{
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: #047aed;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.btn-outline{
+    background-color:transparent;
+    border: 1px #fff solid;
+}
+.btn:hover{
+    transform: scale(0.98);/*this has one as default size*/
+}
+
+/* background and coloured button */
+.bg-primary, 
+.btn-primary{
+    background-color: #047aed;
+    color: #fff;
+}
+.bg-secondary, 
+.btn-secondary{
+    background-color: #1c3fa8;
+    color: #fff;
+}
+.bg-dark, 
+.btn-dark{
+    background-color: #002240;
+    color: #fff;
+}
+.bg-light, 
+.btn-light{
+    background-color: #f4f4f4;
+    color: #333;
+}
+.bg-dark a, .btn-dark a,
+.bg-light a, .btn-light a,
+.bg-primary a, .btn-primary a,
+.bg-secondary a, .btn-secondary{
+    color: #fff;
+}
+
+/* text size */
+.lead{
+    font:20px;
+}
+.sm{
+    font-size: 1rem;
+}
+.md{
+    font-size: 2rem;
+}
+.lg{
+    font-size: 3rem;
+}
+.text-center{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;/*horizontal alignment*/
+    align-items: center;/*vertical alignment*/
+    height: 100%; /*set the element fit to the container size*/
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);/*indicate the wideness of the grid  this show eqaul sizing of grid content*/
+    gap:20px; /*create gap inbetween grid elment*/
+    justify-content: center;
+    align-items: center;
+    height: 100%; /*the grid fit into the main container size completely without overlappingikj*/
+}
+/* this position the element of the grid3 into equal size box */
+.grid-3{
+    grid-template-columns: repeat(3, 1fr);
+}
+/* margin 1rem x2 of the default sized of elt */
+/* my margin on y axis while m margin allround */
+.my-1{
+    margin: 1rem 0;
+}
+.my-2{
+    margin: 1.5rem 0;
+}
+.my-3{
+    margin: 2rem 0;
+}
+.my-4{
+    margin: 3rem 0;
+}
+.my-5{
+    margin: 4rem 0;
+}
+.m-1{
+    margin: 1rem;
+}
+.m-2{
+    margin: 1.5rem;
+}
+.m-3{
+    margin: 2rem;
+}
+.m-4{
+    margin: 3rem;
+}
+.m-5{
+    margin: 4rem;
+}
+/* padding 1rem x2 of the default sized of elt */
+/* my padding on y axis while p padding all-round */
+.py-1{
+    padding: 1rem 0;
+}
+.py-2{
+    padding: 1.5rem 0;
+}
+.py-3{
+    padding: 2rem 0;
+}
+.py-4{
+    padding: 3rem 0;
+}
+.py-5{
+    padding: 4rem 0;
+}
+.p-1{
+    padding: 1rem;
+}
+.p-2{
+    padding: 1.5rem;
+}
+.p-3{
+    padding: 2rem;
+}
+.p-4{
+    padding: 3rem;
+}
+.p-5{
+    padding: 4rem;
+}

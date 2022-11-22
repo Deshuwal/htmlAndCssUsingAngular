@@ -1,0 +1,26 @@
+/*  cli css  */
+/* --------------------------- */
+.cli .grid{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+/* anyting that is the first child of the grid should be selected */
+.cli .grid > *:first-child{
+    grid-column: 1 /span 2;
+    grid-row: 1 /span 2;
+}
+/* media query i.e how it will appear on devices */
+/* tablets and under */
+/* ---------------------------------------------------- */
+@media(max-width:768px){
+    /* this applied to all the grid elts */
+    .cli .grid
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .cli .grid >*:first-child{
+        grid-column: 1;
+        grid-row: 1;
+     }
+}

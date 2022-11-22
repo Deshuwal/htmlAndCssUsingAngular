@@ -1,0 +1,28 @@
+.showcase-form{
+    position: relative;
+    top: 60px; /*implemented with only relative or absolute*/
+    height: 350px;
+    width: 400px;
+    padding:40px;
+    z-index: 50;/*this determine how a element is push forward of 100 is the complete push*/
+
+}
+.showcase-form .form-control{
+    margin: 30px 0;
+}
+/*this format the input boxes */
+.showcase-form input[type='text'],
+.showcase-form input[type='email']{
+    border: 0;
+    border-bottom: 1px solid #658670;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+/* this remove outline when input has focus on i.e text outline */
+.showcase-form input:focus{
+    outline: none;
+    box-shadow: none;
+    box-sizing: none;
+}
